@@ -2,9 +2,10 @@ body{
     background: linear-gradient(180deg , #e1e2e4,#edf2f9,#fff) ;
     background-position: center;
     background-repeat: no-repeat;
-    font-family : Myriad Pro;
+    font-family : Myriad Pro,Tahoma,'Times New Roman', Times, serif;
     
 }
+
 .navbar{ 
 
   background: #204d76;
@@ -170,6 +171,16 @@ button{
     font-weight: bold;
     color: #204d76;
 }
+
+.brands {
+    color:#313437;
+    border-top: 5px #204d76 solid;
+    border-bottom: 5px #204d76 solid;
+
+  }
+  .brands img{
+      height: 120px;
+  }  
 footer{ 
   background: #48c1be;
     height: 8vh;
