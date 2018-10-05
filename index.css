@@ -209,4 +209,51 @@ footer{
     100%{
       transform: translate3d(-3500px, 0, 0);
     }}
-    
+
+    /*Accessoires*/
+    .Item1left{
+display: flex;
+align-items: flex-start;
+  border-radius: 5%;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  background-image: url("./Item1.png");
+  background-repeat: no-repeat;
+
+    }
+    .Item1right{
+        display: flex;
+align-items: flex-end;
+  border-radius: 5%;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  background-image: url("./Item1right.png");
+  background-repeat: no-repeat;
+    }
+    .Item2left{
+        display: flex;
+        align-items: flex-start;
+          border-radius: 5%;
+          font-size: 20px;
+          color: #fff;
+          text-align: center;
+          background-image: url("./Item2left.png");
+          background-repeat: no-repeat;
+        
+            }
+            .Item2right{
+                display: flex;
+        align-content: flex-start;
+          border-radius: 5%;
+          font-size: 20px;
+          color: #fff;
+          text-align: center;
+          background-image: url("./Item2right.png");
+          background-repeat: no-repeat;
+            }
+#accessoires{
+    color:#313437;
+    border-top: 5px #204d76 solid;
+}
