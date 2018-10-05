@@ -10,7 +10,7 @@ body{
 
   background: #204d76;
     background-size: cover;
-    height: 15vh;
+    height: 20vh;
     width:100%;
     display:flex;
     align-items: center;
@@ -39,7 +39,7 @@ body{
     font-weight : bold;
     color : #48c1be;
 right: 50px;
-    margin: 40px;
+    /* margin: 40px; */
     left: 30%;
     font-size: 40px;
     align-content: center;
@@ -152,7 +152,7 @@ input,textarea{
     width: 300px;
     height: 40px;
     background-color: #48c1be;
-    padding: 15px;
+    /* padding: 15px; */
     border-radius: 10px;
     border: 2px solid #204d76;
     color: #204d76;
@@ -190,3 +190,23 @@ footer{
     position: fixed;
     bottom: 0;
 }
+/*slide swip*/
+.wrapper {
+    overflow: hidden;
+  }
+  
+  .sliding-background {
+    background: url("./gobeletswip.jpg") repeat-x;
+    height: 399px;
+    width: 5076px;
+    animation: slide 60s linear infinite;
+  }
+  
+  @keyframes slide{
+    0%{
+      transform: translate3d(0, 0, 0);
+    }
+    100%{
+      transform: translate3d(-3500px, 0, 0);
+    }}
+    

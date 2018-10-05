@@ -47,11 +47,14 @@
 
         </nav>
     </section>
+    <div class="wrapper">
+        <div class="sliding-background"></div>
+    </div>
     <main>
         <div class="col-12">
             <a class="personaliser" href="#Gobelets-personnalisés">PERSONALISER VOS GOBLETS</a>
         </div>
-        <section id="nosservices" style="margin: 40px;">
+        <section id="nosservices">
 
             <div class="container">
                 <div class="row">
@@ -104,65 +107,80 @@
 
             </div>
         </section>
-        <section id="devis" style="margin: 40px;">
+
+
+        </section>
+        <section id="devis">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4"></div>
                     <div class="col-sm-4">
 
-                        <form class="form-group">
+                        <form class="form-group" action="index.php" method="get">
                             <!--action="#" method="post" name="form_devis" id="form_id" class="form_devis" >-->
                             <h2 style="font-size: 35px; font-weight: bold; color: #204d76;">Demander un Devis</h2>
                             <label>Nom de la société :</label>
-                            <input type="text" name="name" id="name" placeholder="Nom de la société" />
+                            <input type="text" name="nomSociete" id="name" placeholder="Nom de la société" required />
 
                             <label>N° Matricule fiscale :</label>
-                            <input type="text" name="name" id="name" placeholder="N° Matricule fiscale" />
+                            <input type="text" name="matricule" id="name" placeholder="N° Matricule fiscale" />
 
                             <label>Type de Gobelets:</label>
-                            <select class="selectpicker">
+                            <select class="selectpicker" id="typegobelets">
                                 <option value="Standards">Gobelets Standards</option>
                                 <option value="Personalisés">Gobelets Personalisés</option>
                             </select>
 
                             <label>Taille Gobelet :</label>
-                            <input type="checkbox" name="subject" id="checkbox" value="12 CL">12 CL
-                            <input type="checkbox" name="subject" id="checkbox" value="18 CL">18 CL
-                            <input type="checkbox" name="subject" id="checkbox" value="20 CL">20 CL
-                            <input type="checkbox" name="subject" id="checkbox" value="25 CL">25 CL
-                            <input type="checkbox" name="subject" id="checkbox" value="33 CL">33 CL
 
-                            <label>Quantité:</label>
-                            <select class="selectpicker" name="Quantité">
-                                <option value="1000">1000</option>
-                                <option value="2000">2000</option>
-                                <option value="1000">3000</option>
-                                <option value="2000">4000</option>
-                                <option value="1000">5000</option>
-                                <option value="2000">6000</option>
-                                <option value="1000">7000</option>
-                                <option value="2000">8000</option>
-                                <option value="1000">9000</option>
-                                <option value="2000">10000</option>
-                                <option value="1000">11000</option>
-                                <option value="2000">12000</option>
-                                <option value="1000">13000</option>
-                                <option value="2000">14000</option>
-                                <option value="1000">15000</option>
-                                <option value="2000">16000</option>
-                                <option value="1000">17000</option>
-                                <option value="2000">18000</option>
-                                <option value="1000">19000</option>
-                                <option value="2000">20000</option>
-                            </select>
+                            <span>
+                                <input type="checkbox" name="subject" value="12 CL" />
+                                <span>12 CL</span>
+                                <span>
+                                    <input type="checkbox" name="subject" value="18 CL" />
+                                    <span>18 CL</span>
+                                    <span>
+                                        <input type="checkbox" name="subject" value="20 CL" />20 CL</span>
+                                    <span>
+                                        <input type="checkbox" name="subject" value="25 CL" />25 CL</span>
+                                    <span>
+                                        <input type="checkbox" name="subject" value="33 CL" />33 CL</span>
 
-                            <label>E-mail :</label>
-                            <input type="email" name="email" id="email" placeholder="" />
+                                    <label>Quantité:</label>
+                                    <select class="selectpicker" name="Quantite" id="quantite" onformchange="onchangeoption()">
+                                        <option value="1000">1000</option>
+                                        <option value="2000">2000</option>
+                                        <option value="1000">3000</option>
+                                        <option value="2000">4000</option>
+                                        <option value="1000">5000</option>
+                                        <option value="2000">6000</option>
+                                        <option value="1000">7000</option>
+                                        <option value="2000">8000</option>
+                                        <option value="1000">9000</option>
+                                        <option value="2000">10000</option>
+                                        <option value="1000">11000</option>
+                                        <option value="2000">12000</option>
+                                        <option value="1000">13000</option>
+                                        <option value="2000">14000</option>
+                                        <option value="1000">15000</option>
+                                        <option value="2000">16000</option>
+                                        <option value="1000">17000</option>
+                                        <option value="2000">18000</option>
+                                        <option value="1000">19000</option>
+                                        <option value="2000">20000</option>
+                                    </select>
 
-                            <label>Ajouter un commentaire :</label>
-                            <textarea type="text" name="comments" id="comments" placeholder="" rows="10"></textarea>
+                                    <div id="quantite2">
+                                        bla bla
+                                    </div>
 
-                            <button id="send" class="btn btn-primary">Envoyer</button>
+                                    <label>E-mail :</label>
+                                    <input type="email" name="email" id="email" placeholder="" />
+
+                                    <label>Ajouter un commentaire :</label>
+                                    <textarea type="text" name="comments" id="comments" placeholder="" rows="10"></textarea>
+
+                                    <button id="send" class="btn btn-primary">Envoyer</button>
                         </form>
                     </div>
                     <div class="col-sm-4"></div>
@@ -195,20 +213,20 @@
                 <div class="row">
                     <div class="col-lg-4">
 
-                        <form action="#" method="post" name="form_name" id="form_id" class="form_class">
+                        <form action="contact.php" method="get" name="form_name" id="form_id" class="form_class">
                             <h2 style="font-size: 35px; font-weight: bold; color: #204d76;">Contact</h2>
                             <label>Nom et prénom :</label>
-                            <input type="text" name="name" id="name" placeholder="Nom & prénom" />
+                            <input type="text" name="nom" id="name" placeholder="Nom & prénom" />
 
                             <label>Email Adress:</label>
-                            <input type="e-mail" name="email" id="email" placeholder="Enter une valide addresse e-mail" />
+                            <input type="email" name="email" id="email" placeholder="Enter une valide addresse e-mail" required />
 
                             <label>Sujet :</label>
-                            <input type="text" name="subject" id="subject" placeholder="Sujet" />
+                            <input type="text" name="sujet" id="subject" placeholder="Sujet" />
 
 
                             <label>Message :</label>
-                            <textarea type="text" name="comments" id="comments" placeholder="" rows="10"></textarea>
+                            <textarea type="text" name="message" id="comments" placeholder="" rows="10" required maxlength="1000"></textarea>
 
                             <button id="send" class="btn btn-primary">Envoyer</button>
                         </form>
@@ -219,7 +237,7 @@
                     <div class="col-lg-4">
 
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12958.111588338596!2d10.824715117326647!3d35.713233605591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1302126eb8f78775%3A0x180f3b40d854ad83!2z2K7ZhtmK2LM!5e0!3m2!1sar!2stn!4v1533912395712"
-                            width=auto height=600px frameborder=0px style="border:0" allowfullscreen></iframe>
+                            width=150px height=600px frameborder=0px style="border:0" allowfullscreen></iframe>
                     </div>
                     <div class="col-lg-4">
                         <div style="width: 320px">
